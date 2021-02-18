@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Header } from './Header';
 import { Footer } from './Footer';
 import { Tile } from './Tile';
 import { Movies } from './Movies';
@@ -21,7 +20,6 @@ export const Home = ({ page }) => {
   const styles = useStyles();
   return (
     <Router>
-      <Header page={page} />
       <Link to='/'></Link>
       <div className={styles.tileContainer}>
         {RESOURCE_TYPES.map((resourceType, index) => <Link to={`/${resourceType.toLowerCase()}`} key={index}><Tile resourceType={resourceType} /></Link>)}
