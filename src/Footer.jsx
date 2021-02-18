@@ -12,6 +12,9 @@ const useStyles = makeStyles({
   footer: {
     background: '#1E1E1E',
     color: '#FFFFFF',
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
   },
   linkContainer: {
     display: 'flex',

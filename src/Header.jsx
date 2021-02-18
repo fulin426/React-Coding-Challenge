@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   header: {
@@ -26,7 +27,6 @@ const useStyles = makeStyles({
   },
   subHeader: {
     background: '#1E1E1E',
-    display: 'flex',
     height: '100px',
     fontSize: '25px',
   }
@@ -41,7 +41,10 @@ export const Header = ({ page }) => {
         <div>Log in</div>
         <div className={styles.trial}>Start your free trial</div>
       </div>
-      <div className={styles.subHeader}>Popular {page}</div>
+      <div className={styles.subHeader}>
+        Popular {page}
+        <Link to='/'>Home</Link>
+      </div>
     </div>
   )
 };
